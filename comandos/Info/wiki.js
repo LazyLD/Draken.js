@@ -1,4 +1,4 @@
-const h = require("../Crawler/Index.js");
+const h = require("hermitpurple").default;
 const wikia = new h("tokyorevengers", 1);
 const Discord = require('discord.js')
 const translate = require('@iamtraction/google-translate');
