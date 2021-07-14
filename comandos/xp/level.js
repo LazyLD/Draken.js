@@ -12,8 +12,8 @@ module.exports = {
       .setAuthor(tag)
       .addField("Level:", lvl)
       .addField(
-        "XP:", `${xp}xp (requer ${req}xp; faltam ${req -
-          xp}xp para o próximo nível).`
+        "XP:",
+        `${xp}xp (requer ${req}xp; faltam ${req - xp}xp para o próximo nível).`
       )
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL({ dynamic: true, size: 4096 }));
