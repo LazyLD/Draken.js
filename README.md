@@ -15,5 +15,6 @@
   - [x] Traduzir as informações extraídas da wiki
 
 - [ ] Eventos
-  - [ ] Entrada
+  - [x] Entrada
+  - [ ] Saída
   - [ ] Enviar mensagem quando o bot entrar em um servidor
