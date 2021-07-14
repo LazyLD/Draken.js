@@ -22,7 +22,8 @@
     "axios": "^0.21.1",
     "node-fetch": "^2.6.1",
     "@iamtraction/google-translate": "^1.1.2",
-    "moment-timezone": "^0.5.33"
+    "moment-timezone": "^0.5.33",
+    "hermitpurple": "^0.2.0"
   },
   "engines": {
     "node": "12.x"
