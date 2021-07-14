@@ -11,3 +11,5 @@
   - [ ] Botinfo
   - [ ] Roleinfo
   - [ ] Channelinfo
+  - [x] Extrair informações da Wiki de Tokyo Revengers utilizando web crawler
+  - [x] Traduzir as informações extraídas da wiki
