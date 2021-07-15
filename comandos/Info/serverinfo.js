@@ -1,5 +1,9 @@
 const { MessageEmbed } = require("discord.js");
-const { parse, parseMs, parseDate } = require("../functions/parse-to-date.js");
+const {
+  parse,
+  parseMs,
+  parseDate
+} = require("../../functions/parse-to-date.js");
 
 module.exports = {
   name: "serverinfo",
@@ -11,6 +15,8 @@ module.exports = {
     const u = g.members.cache;
     const e = g.emojis.cache;
     const cc = g.me;
+    const h = u.filter(u => !u.user.bot);
+    const b = u.filter(u => u.user.bot);
 
     const banner = g.bannerURL({ dynamic: true, size: 4096 });
     const icon = g.iconURL({ dynamic: true, size: 4096 });
@@ -45,9 +51,27 @@ module.exports = {
       )
       .addField(
         `Membros (total: ${u.size}):`,
-        `Usuários: ${u.filter(u => !u.user.bot).size};\nBots: ${
-          u.filter(u => u.user.bot).size
-        };`
+        `Usuários: ${h.size} (${
+          h.filter(u => {
+            u = u.presence.status;
+            return (
+              u == "online" ||
+              u == "idle" ||
+              u == "dnd" ||
+              u.id == message.author.id
+            );
+          }).size
+        } online(s));\nBots: ${b.size} (${
+          b.filter(u => {
+            u = u.presence.status;
+            return (
+              u == "online" ||
+              u == "idle" ||
+              u == "dnd" ||
+              u.id == message.author.id
+            );
+          }).size
+        } online(s));`
       )
       .addField(
         `Emojis (total: ${e.size})`,
@@ -63,7 +87,7 @@ module.exports = {
           banner ? `[Link](${banner})` : "nenhum"
         };\nSplash URL: ${splash ? `[Link](${splash})  ` : "nenhum"}`
       )
-    .setColor("RANDOM");
+      .setColor("RANDOM");
 
     if (banner) {
       embed.setImage(banner);
