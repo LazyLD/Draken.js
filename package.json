@@ -20,7 +20,7 @@
     "request": "^2.88.2",
     "cheerio": "^0.22.0",
     "axios": "^0.21.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "@iamtraction/google-translate": "^1.1.2",
     "moment-timezone": "^0.5.33",
     "hermitpurple": "^0.2.0"
